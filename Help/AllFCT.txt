@@ -1,0 +1,89 @@
+00 manuelle eingabe
+01 Schalter auf Standby (Reset)
+02 Gerät Einschalten
+03 Gerät Ausschalten
+04 Polarität +
+05 Polarität -
+06 Sollwert 1
+07 Sollwert 2
+08 Sollwert 3
+09 Sollwert 4
+0A Sollwert 5
+0B Sollwert 6
+0C Sollwert 7
+0D Sollwert 8
+0E Wait
+0F Release
+10 Daten für Fair-, Modul- oder IO-Bus
+11 Adresse für Fair-, Modul- oder IO-Bus
+12 @ Set INR-Maske
+13 @ Echo-Sollwert
+14 Lastumschaltung (Schaltkarte)
+15 Lastumschaltung (Schaltkarte)
+16 Lastumschaltung (Schaltkarte)
+17 Lastumschaltung (Schaltkarte)
+18 Lastumschaltung (Schaltkarte)	                       |
+19 Lastumschaltung (Schaltkarte)
+20 Broadcast für Funktionsgenerator
+28 Status 1 anfordern
+29 Status 2 anfordern
+2A Status 3 anfordern
+2B SIS 12 Betrieb
+2C SIS 18 Betrieb
+2D @ Board-Selekt für Fair-Bus
+30 Modulbus Funktionscode
+4F Modulbus Funktionscode
+5F Conv.-Command für ADC‘s
+60 @ IFK-Mode
+61 @ I2C-CMD/Daten
+62 @ FC-Decoder-RAM-Adresse
+63 @ FC-Decoder-RAM-Daten
+64 @ Group-Count
+65 @ IFK-Firmware-Loader-Daten
+66 @ IFK-Firmware-Loader-Control
+67 @ FB-Status
+68 @ FB-SRQ-Enable
+75 @ Res. Piggy-Err./DTACK-Err.
+7D @ Reset RCV-Error(VWTest)
+7E @ Reset Broadcast
+7F @ Set Broadcast
+80 Daten lesen
+81 Istwert 1
+82 Istwert 2
+83 Istwert 3
+84 Istwert 4
+85 Istwert 5
+86 Istwert 6
+87 Istwert 7
+88 Istwert 8
+89 Echo-Sollwert rücklesen
+8D #  Piggy-Back EPLD-Version
+8E #  Piggy-Back Identcode
+8F Senderfreigabe für Datenblock
+90 Daten vom Fair-, Modul- oder IO-Bus
+91 @ Funktionsgenerator: Status 1
+92 @ Funktionsgenerator: Status 2
+93 @ Funktionsgenerator: Sollwert 1
+94 @ Funktionsgenerator: Sollwert 2
+95 @ FG: Stützpunkt-Sollwert 1
+96 @ FG: Stützpunkt-Sollwert 2
+97 @ IFK-Mode
+98 @ I2C-CMD/Daten
+99 @ FC-Decoder Daten (RAM)
+9A @ FB oder MB-Status-Register
+9B @ Group-Count-Register
+9C @ IFK-Firmware-Loader-Daten
+9D @ IFK-Firmware-Loader-Status
+B0 Modulbus Funktionscode
+BF Modulbus Funktionscode
+C0 Status-Byte1
+C1 Status-Byte2
+C2 Status-Byte3
+C9 @ Interrupt-Maske
+CA @ Ctrl-Register
+CB @ MaskeHI-Interlock
+CC @ IFK-Identcode
+CD @ IFKEPLD-Version
+D0 @ FB-SRQ-Enable
+D1 @ FB-SRQ-Active
+D2 @ FB-SRQ-In

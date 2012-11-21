@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<PlcGivenDataInfo><VarConfigAddresses><VarConfigAddress><Name>MAIN.myInput</Name><Type>BYTE</Type><IGroup>61472</IGroup><IOffset>0</IOffset><BitSize>8</BitSize></VarConfigAddress><VarConfigAddress><Name>MAIN.myOutput</Name><Type>BYTE</Type><IGroup>61488</IGroup><IOffset>0</IOffset><BitSize>8</BitSize></VarConfigAddress></VarConfigAddresses></PlcGivenDataInfo>

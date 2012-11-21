@@ -1,0 +1,43 @@
+00 manuelle eingabe
+80 Daten lesen
+81 Istwert 1
+82 Istwert 2
+83 Istwert 3
+84 Istwert 4
+85 Istwert 5
+86 Istwert 6
+87 Istwert 7
+88 Istwert 8
+89 Echo-Sollwert rücklesen
+8D #  Piggy-Back EPLD-Version
+8E #  Piggy-Back Identcode
+8F Senderfreigabe für Datenblock
+90 Daten vom Fair-, Modul- oder IO-Bus
+91 @ Funktionsgenerator: Status 1
+92 @ Funktionsgenerator: Status 2
+93 @ Funktionsgenerator: Sollwert 1
+94 @ Funktionsgenerator: Sollwert 2
+95 @ FG: Stützpunkt-Sollwert 1
+96 @ FG: Stützpunkt-Sollwert 2
+97 @ IFK-Mode
+98 @ I2C-CMD/Daten
+99 @ FC-Decoder Daten (RAM)
+9A @ FB oder MB-Status-Register
+9B @ Group-Count-Register
+9C @ IFK-Firmware-Loader-Daten
+9D @ IFK-Firmware-Loader-Status
+B0 Modulbus Funktionscode
+BF Modulbus Funktionscode
+C0 Status-Byte1
+C1 Status-Byte2
+C2 Status-Byte3
+C9 @ Interrupt-Maske
+CA @ Ctrl-Register
+CB @ MaskeHI-Interlock
+CC @ IFK-Identcode
+CD @ IFKEPLD-Version
+D0 @ FB-SRQ-Enable
+D1 @ FB-SRQ-Active
+D2 @ FB-SRQ-In
+
+

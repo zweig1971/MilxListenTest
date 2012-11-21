@@ -1,0 +1,33 @@
+Loop Counter
+------------
+Zählt die Schleifendurchläufe der Funktionsliste hoch.
+Mit dem Button 'X' kann der Zähler genullt werden.
+
+
+Error Counter
+-------------
+Zählt alle aufgetretenen Fehler hoch. 
+Mit dem Button 'X' kann der Zähler genullt werden.
+
+
+Verify Failure
+--------------
+Werden gelesene Werte verschiedener Zeilen in der 
+Funktionstabelle miteinander verglichen und sind
+diese ungleich, wird der Zähler hochgezählt.
+Mit dem Button 'X' kann der Zähler genullt werden.
+
+
+System Massage
+---------------
+Dort werden, wenn möglich, Fehlermeldungen in Klartext 
+wiedergegeben. Mit dem Button 'X' kann die Massage Box
+gelöscht werden.
+
+
+Hold on error
+-------------
+Tritt ein Fehler auf, wird die Funktionsliste noch bis 
+zum ende abgearbeitet, dann wird die Schleife unterbrochen.
+ 
+ 

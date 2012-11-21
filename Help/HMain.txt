@@ -1,0 +1,166 @@
+Menüleiste
+============
+
+Genauere Informationen finden sich in den jeweiligen 
+Hilfen der Untermenüs
+
+Datei
+-----
+Mit öffnen/speichern kann die Funktionsliste 
+gesichert oder geladen werden. 
+Die Liste wird als Textdatei gespeichert. 
+
+
+Anzeige
+-------
+- Details
+  In einem neuen Fenster werden noch zusätzliche 
+  Informationen zur Verfügung gestellt.
+  Loop Counter, Error Counter etc. Außerdem kann 
+  man hier die Arbeitsgeschwindigkeit der
+  Funktionsliste beeinflussen.
+
+- Bit Arrays 
+  In einem neuen Fenster können Leseergebnisse 
+  vom MilBus Binär dargestellt und genauer 
+  betrachtet werden.
+  
+
+Extras
+------
+- Search &  Replace
+  Sucht und ersetzt in der Funktionsliste.  
+
+- IFK to update
+  In einem neuen Fenster werden alle gefundenen
+  IFKs am MilBus angezeigt.Hier besteht auch die 
+  Möglichkeit eine IFK manuell hinzuzufügen. 
+
+- IFK diagnostic
+  In einem neuen Fenster werden alle IFKs am Bus,
+  alle neu hinzugekommenen IFKs und alle 
+  unbeständigen IFKs angezeigt.  
+
+- Einstellungen
+  Hier besteht die Möglichkeit, wenn mehrere 
+  vorhanden, die PCI-Mil-Karte zu wechseln.
+
+
+
+Aufbau der Funktionsliste
+==========================
+
+Allgemein
+---------
+
+Die Funktionsliste kann 256 Anweisung nacheinander 
+ausführen.Dabei ist es unerheblich, wo die Anweisung 
+in der Liste steht denn die Liste wird pro Durchlauf, 
+einmal komplett von 1 bis 256 abgearbeitet. Ob die
+Anweisung sinvoll sind oder nicht wird vom Programm
+nicht geprüft.
+
+In der 'Do' Spalte steht die  Funktion,
+was gemacht werden soll.
+
+In der 'IFK' Spalte steht die Interfacekarten Nummer
+in Hexadezimal an die sich die Anweisung richten soll.
+
+In der 'FCT' Spalte steht der Funktionscode 
+für die IFK in Hexadezimal.
+
+In 'Wr-Data' stehen, wenn es sich um eine
+Schreibanweisung handelt,die zu schreibenden Daten 
+in Hexadezimal. Dieser kann entweder der 
+Schleifenzähler, ein Wert aus einer anderen Zeile 
+oder ein Manueller Wert sein. 
+
+In 'Rd-Data' stehen, wenn es sich um eine 
+Leseanweisung handelt,die gelesenen Daten in Hexadezimal.
+
+In 'Rd-Data Bin' stehen, wenn es sich um eine 
+Leseanweisung handelt,die gelesenen Daten in Binär.
+
+In 'Comp' steht die Zeile mit der das Ergebnis einer 
+Leseanweisung verglichen werden sollen. Bei ungleichen 
+Werten wird der unter der Menüleiste -> Anzeige -> Details 
+der 'Verify Failure' Zähler hoch gesetzt und ggf. nach 
+dem Durchlauf die Schleife beendet.
+
+In 'Active' steht 'EN' für enable, die Zeile wird bei 
+einem Durchlauf abgearbeitet oder 'X' für disable, 
+die Zeile wird ignoriert.
+
+
+Copy & Paste (Kopieren und Einfügen)
+------------------------------------
+
+Die Tasten Steuerung (Strg), Umschalt (Shift) drücken 
+und mit der Maus in die Liste auf die erste Spalte 
+('Do') gehen und rechte Maustaste drücken und gedrückt 
+halten. Die Markierung bis zur letzten Spalte ('Active'), 
+ggf. über mehrere Zeilen, ziehen.
+
+Danach gleichzeitig die Tasten Steuerung (Strg), 
+Umschalt (Shift) und 'C' drücken. 
+
+Dann in die gewünschte Zeile gehen und die erste 
+Spalte ('DO') markieren. Danach gleichzeitig die Tasten 
+Steuerung (Strg), Umschalt (Shift) und 'V' drücken. 
+
+
+Löschen
+-------
+Die Tasten Steuerung (Strg), Umschalt (Shift) drücken und 
+mit der Maus in die Liste auf die erste Spalte ('Do') 
+gehen und rechte Maustaste drücken und gedrückt halten. 
+Die Markierung bis zur letzten Spalte ('Active'),
+ggf. über mehrere Zeilen, ziehen.
+ 
+Danach gleichzeitig die Tasten Steuerung (Strg), 
+Umschalt (Shift) und 'X' drücken. 
+
+
+Löschen der gesamten Liste
+---------------------------
+Rechts unten neben der Liste befindet sich ein Button 'X'. 
+Dieser Löscht den gesamten Inhalt der Liste
+
+
+Anweisung hinzufügen
+--------------------
+Dies geschieht mittels Doppelklick in eine leere Zeile 
+der Liste oder durch den Button Hinzufügen '+' Links 
+unter der Liste.
+
+
+
+Anzeigen/Buttons
+================
+Rechts unterhalb der Liste befindet sich eine '
+Signallampe' die entweder Grün, oder in einem 
+Fehlerfall, Rot leuchtet. Klickt man die 
+'Signallampe' an so wird diese wieder 
+zurückgesetzt. Details zu den aufgetretenen 
+Fehlern findet man unter
+Menüleiste->Anzeige->Details.
+
+
+Loop
+------
+Bei Loop wird die Funktionsliste in einer 
+Dauerschleife abgearbeitet. 
+
+
+Step
+-----
+Die Funktionsliste wird einmal abgearbeitet.
+
+
+Singel Step
+--------------
+Arbeitet die einzelnen Anweisungen  innerhalb der  
+Funktionsliste ab. Dazu mit der Maus die Zeile 
+markieren  ab der gestartet werden soll. Mit jeden
+Klick auf 'Singel  Step' werden dann einzeln die 
+Anweisungen abgearbeitet. 

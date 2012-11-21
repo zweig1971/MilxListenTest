@@ -1,0 +1,137 @@
+Function
+========
+
+
+Write IFK
+---------
+Schreibt einen Wert an eine Interfacekarte. 
+Dazu wird die Interfacekarten Nummer (IFK-Nr) gebraucht
+und der Funktionscode (FCT) der im entsprechenden 
+Feld ausgewählt werden kann.
+
+Nun wird noch ein Wert gebraucht. Dazu bei 'Write Data'
+auswählen was gesendet werden soll.
+
+
+Read IFK
+--------
+Liest einen Wert von einer Interfacekarte.
+Dazu wird die Interfacekarten Nummer (IFK-Nr) gebraucht
+und der Funktionscode (FCT) der im entsprechenden 
+Feld ausgewählt werden kann.
+
+Diesen Wert kann man mit einer anderen Zeile der 
+Funktionstabelle vergleichen. Dazu im Feld 'Compare with'
+die zu vergleichende Zeile aussuchen.
+
+
+Write  FCT
+----------
+Schreibt einen Funktionscode an eine Interfacekarte.
+Dazu wird die Interfacekarten Nummer (IFK-Nr) gebraucht
+und der Funktionscode (FCT) der im entsprechenden 
+Feld ausgewählt werden kann.
+
+
+Write Data
+----------
+Schreibt einen Wert auf den MilBus.
+Dazu wird ein Wert gebraucht. Dazu im Feld 'Write Data'
+auswählen was gesendet werden soll.
+
+
+Read Data
+---------
+Liest einen Wert vom  MilBus.
+Diesen Wert kann man mit einer anderen Zeile der 
+Funktionstabelle vergleichen. Dazu im Feld 'Compare with'
+die zu vergleichende Zeile aussuchen.
+
+
+Write Cmd
+---------
+Schreibt ein Kommando- Wort auf den MilBus. 
+
+
+Timer
+-----
+Zieht einen Timer auf.
+Dazu bei 'Time' die Zeit die gewartet werden soll in
+dezimal eingeben und die gewünschte Einheit auswählen.
+
+
+Constante
+----------
+Schreibt eine Constante in die Liste. Auf die kann man 
+dann mit "Row Nr" von einer anderen Zeilen der Liste 
+zugreifen.  
+
+
+Eingabefelder
+=============
+
+Die Eingabefelder sind je nach Kontext aktiv oder passiv.
+
+
+Active
+------
+Ist der Marker gesetzt, so ist eingegebene Funktion 
+Aktive (Enabeld).
+
+
+IFK-Nr
+------
+Hier kann aus einer Liste die Interfacekarte in 
+Hexadezimal ausgesucht werden. Um die Liste zu 
+aktualisieren, muss mit Menüleiste->IFK to update
+ein MilBus scann durchgeführt werden.
+Alternativ kann auch eine Zeilennummer eingegeben 
+werden, die auf eine Konstante zeigt. Diese Konstante 
+wird dann als IFK-Nummer interpretiert werden
+
+
+FCT/Manuell
+-----------
+Hier wählt man den Funktionscode. Es wird je nach
+Funktion, bestimmte Funktionscodes angeboten. Wird 
+hingegen '00 manuelle  Eingabe' ausgewählt so kann man
+in das Feld 'Manuell' einen beliebigen zweistelligen 
+Hexadezimalen Funktionscode eingeben.
+
+
+Write Data
+----------
+Wird zum schreiben von Daten auf den MilBus gebraucht.
+
+- Counter (c)
+  Benutzt den Schleifenzähler (Loop Counter) in 
+  Hexadezimal.
+
+- nCounter (nC)
+  Benutzt die Inverse des Schleifenzähler (Loop Counter) 
+  in Hexadezimal.
+
+- Row Nr (Z) 
+  Benutzt einen Wert aus einer
+  anderen Zeile der Funktionsliste.
+
+- Manuell (M)
+  Es kann ein beliebiger, vierstelliger Hexadezimaler
+  Wert benutze werden.
+
+
+Compare with
+------------
+Ein gelesener Wert kann mit einen geschriebenen
+Wert einer beliebigen Zeile aus der Funktionsliste
+(Spalte 'Wr-Data') verglichen werden. Im Fehlerfall 
+wird der 'Verify Failure' (Anzeige->Details) Zähler  
+hochgezählt.
+
+
+Time
+----
+Damit kann ein Timer eingesetzt werden, der eine 
+vorgegebene Zeit vergehen lässt bis aus der 
+Funktionsliste, die nächste Zeile abgearbeitet wird. 
+Der Timer ist allerdings nicht sehr genau.

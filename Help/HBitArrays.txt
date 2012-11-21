@@ -1,0 +1,19 @@
+Bit Array 
+----------
+Zeigt einen gelesenen Wert aus einer Zeile in der
+Funktionstabelle in Binär an. Mit dem Pull-Down 
+Menü 'Line Nr' kann man die gewünschte Zeile aussuchen
+
+
+Update
+------
+Durch Klicken auf den Button, werden die Werte aus den
+ausgesuchten Zeilen der Funktionstabelle  übernommen
+und Binär dargestellt.
+
+
+Auto Update
+-----------
+Ist der Marker gesetzt, werden die Werte aus den
+ausgesuchten Zeilen der Funktionstabelle bei jedem
+Schleifendurchgang übernommen und Binär dargestellt.

@@ -1,0 +1,49 @@
+00 manuelle eingabe
+01 Schalter auf Standby (Reset)
+02 Gerät Einschalten
+03 Gerät Ausschalten
+04 Polarität +
+05 Polarität -
+06 Sollwert 1
+07 Sollwert 2
+08 Sollwert 3
+09 Sollwert 4
+0A Sollwert 5
+0B Sollwert 6
+0C Sollwert 7
+0D Sollwert 8
+0E Wait
+0F Release
+10 Daten für Fair-, Modul- oder IO-Bus
+11 Adresse für Fair-, Modul- oder IO-Bus
+12 @ Set INR-Maske
+13 @ Echo-Sollwert
+14 Lastumschaltung (Schaltkarte)
+15 Lastumschaltung (Schaltkarte)
+16 Lastumschaltung (Schaltkarte)
+17 Lastumschaltung (Schaltkarte)
+18 Lastumschaltung (Schaltkarte)	                       |
+19 Lastumschaltung (Schaltkarte)
+20 Broadcast für Funktionsgenerator
+28 Status 1 anfordern
+29 Status 2 anfordern
+2A Status 3 anfordern
+2B SIS 12 Betrieb
+2C SIS 18 Betrieb
+2D @ Board-Selekt für Fair-Bus
+30 Modulbus Funktionscode
+4F Modulbus Funktionscode
+5F Conv.-Command für ADC‘s
+60 @ IFK-Mode
+61 @ I2C-CMD/Daten
+62 @ FC-Decoder-RAM-Adresse
+63 @ FC-Decoder-RAM-Daten
+64 @ Group-Count
+65 @ IFK-Firmware-Loader-Daten
+66 @ IFK-Firmware-Loader-Control
+67 @ FB-Status
+68 @ FB-SRQ-Enable
+75 @ Res. Piggy-Err./DTACK-Err.
+7D @ Reset RCV-Error(VWTest)
+7E @ Reset Broadcast
+7F @ Set Broadcast

@@ -1,0 +1,21 @@
+IFK diagnostic
+==============
+
+Es werden alle IFKs am Bus, alle neu hinzugekommenen
+IFKs und alle unbest‰ndigen IFKs angezeigt.
+
+IFKs Online
+-----------
+Zeigt alle am MilBus gefunden Interfacekarten
+
+IFKs new
+--------
+Zeigt alle, die nach dem ersten scann neu hinzu 
+gekommenen Interfacekarten.
+
+IFKs unreliable
+---------------
+Zeigt Interfacekarten, die sich unzuverl‰ssig verhalten.
+Das heiﬂt, das sich die Karten mal am MilBus melden und
+mal nicht.
+ 

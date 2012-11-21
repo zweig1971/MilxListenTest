@@ -1,0 +1,9 @@
+IFK Online
+==========
+Zeigt alle die am MilBus gefundenen Interfacekarten an.
+Mit Klick auf den Button 'Update' wird  der MilBus neu
+abgescannt und die Liste der gefundenen IFKs der
+Funktionsliste zur Verfügung gestellt.
+
+Außerdem  kann man Manuell eine Interfacekarten
+Nummer in Hexadezimal der Liste hinzufügen.
