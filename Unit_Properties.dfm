@@ -105,7 +105,7 @@ object Form_Properties: TForm_Properties
         Caption = 'Hex'
       end
       object Label10: TLabel
-        Left = 324
+        Left = 334
         Top = 12
         Width = 36
         Height = 17
@@ -133,14 +133,14 @@ object Form_Properties: TForm_Properties
         OnKeyPress = Edit_WR_ConstantKeyPress
       end
       object Edit_Offset: TMaskEdit
-        Left = 287
+        Left = 280
         Top = 8
-        Width = 33
+        Width = 49
         Height = 25
-        EditMask = '>CC'
-        MaxLength = 2
+        EditMask = '>CCCC'
+        MaxLength = 4
         TabOrder = 2
-        Text = '00'
+        Text = '0000'
         OnKeyPress = Edit_OffsetKeyPress
       end
     end

@@ -1,7 +1,7 @@
 object Form_FunctionList: TForm_FunctionList
   Left = 258
   Top = 180
-  Width = 841
+  Width = 961
   Height = 687
   AutoSize = True
   Caption = 'Function List'
@@ -36,12 +36,12 @@ object Form_FunctionList: TForm_FunctionList
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 833
+    Width = 953
     Height = 586
     BevelInner = bvLowered
     TabOrder = 0
     object Panel3: TPanel
-      Left = 616
+      Left = 736
       Top = 512
       Width = 178
       Height = 67
@@ -109,9 +109,9 @@ object Form_FunctionList: TForm_FunctionList
     object StringGrid1: TStringGrid
       Left = 8
       Top = 24
-      Width = 809
+      Width = 929
       Height = 481
-      ColCount = 9
+      ColCount = 10
       RowCount = 256
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -136,7 +136,8 @@ object Form_FunctionList: TForm_FunctionList
         113
         175
         43
-        50)
+        50
+        136)
       RowHeights = (
         24
         24
@@ -411,7 +412,7 @@ object Form_FunctionList: TForm_FunctionList
       OnClick = Button_plusClick
     end
     object Button_ClearTabel: TButton
-      Left = 800
+      Left = 920
       Top = 512
       Width = 17
       Height = 17
@@ -427,7 +428,7 @@ object Form_FunctionList: TForm_FunctionList
     end
   end
   object Button_Close: TButton
-    Left = 704
+    Left = 824
     Top = 592
     Width = 129
     Height = 41

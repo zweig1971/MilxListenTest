@@ -1874,9 +1874,9 @@ object Form_Info: TForm_Info
   object Label4: TLabel
     Left = 0
     Top = 50
-    Width = 72
+    Width = 80
     Height = 16
-    Caption = 'Version 0.8'
+    Caption = 'Version 0.82'
   end
   object Label5: TLabel
     Left = 0
@@ -1888,9 +1888,9 @@ object Form_Info: TForm_Info
   object Label7: TLabel
     Left = 0
     Top = 66
-    Width = 53
+    Width = 61
     Height = 16
-    Caption = 'juli 2011'
+    Caption = 'Aug 2011'
   end
   object Button1: TButton
     Left = 73

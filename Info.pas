@@ -26,6 +26,7 @@ type
     Label4: TLabel;
     Label5: TLabel;
     Label7: TLabel;
+    Label6: TLabel;
     procedure Button1Click(Sender: TObject);
   private
     { Private-Deklarationen }

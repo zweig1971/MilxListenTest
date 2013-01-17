@@ -296,6 +296,7 @@ begin
      StringGrid1.Cells[AcolRdDataBin,0]:= StringGridCol_6;
      StringGrid1.Cells[AColCmp,0]      := StringGridCol_7;
      StringGrid1.Cells[AColActive,0]   := StringGridCol_8;
+     StringGrid1.Cells[AColComment,0]  := StringGridCol_9;
 
      for i:=1 to StringGrid1.RowCount-1 do StringGrid1.Cells[0,i]:= IntToStr(i);
 
@@ -1203,7 +1204,7 @@ begin
          //offset suchen, ausschneiden und eintragen
          myPos:= pos(TOffset,Form_FunctionList.StringGrid1.Cells[AColWrData,y_zelle]);
          if(myPos > 0) then begin
-            ValueStr:= copy(Form_FunctionList.StringGrid1.Cells[AColWrData,y_zelle], myPos+4, 2);
+            ValueStr:= copy(Form_FunctionList.StringGrid1.Cells[AColWrData,y_zelle], myPos+4, 4);
             Form_Properties.Edit_Offset.Text:= ValueStr;
          end;
        end;

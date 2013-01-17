@@ -1,6 +1,6 @@
 object Form_Info: TForm_Info
-  Left = 508
-  Top = 329
+  Left = 465
+  Top = 315
   Width = 283
   Height = 248
   AutoSize = True
@@ -1859,38 +1859,45 @@ object Form_Info: TForm_Info
   end
   object Label2: TLabel
     Left = 0
-    Top = 121
+    Top = 125
     Width = 113
     Height = 16
     Caption = 'GSI DARMSTADT'
   end
   object Label3: TLabel
     Left = 0
-    Top = 135
+    Top = 139
     Width = 52
     Height = 16
     Caption = 'BEL/HW'
   end
   object Label4: TLabel
     Left = 0
-    Top = 50
+    Top = 53
     Width = 80
     Height = 16
-    Caption = 'Version 0.81'
+    Caption = 'Version 0.82'
   end
   object Label5: TLabel
     Left = 0
-    Top = 95
+    Top = 99
     Width = 86
     Height = 16
     Caption = 'Marcus Zweig'
   end
   object Label7: TLabel
     Left = 0
-    Top = 66
+    Top = 26
     Width = 61
-    Height = 16
+    Height = 18
     Caption = 'Aug 2011'
+  end
+  object Label6: TLabel
+    Left = 0
+    Top = 69
+    Width = 58
+    Height = 16
+    Caption = 'Jan 2013'
   end
   object Button1: TButton
     Left = 73

@@ -296,6 +296,7 @@ begin
      StringGrid1.Cells[AcolRdDataBin,0]:= StringGridCol_6;
      StringGrid1.Cells[AColCmp,0]      := StringGridCol_7;
      StringGrid1.Cells[AColActive,0]   := StringGridCol_8;
+     StringGrid1.Cells[AColComment,0]  := StringGridCol_9;
 
      for i:=1 to StringGrid1.RowCount-1 do StringGrid1.Cells[0,i]:= IntToStr(i);
 
@@ -554,22 +555,42 @@ var IFKNr       :_WORD;
     substr      : string;
     WrDtaOrder  : string;
     ErrSring    : string;
+    ValueStr    : string;
+    RowNr       :_WORD;
     FiFoNotEmpty: boolean;
     StringLeng  :integer;
     StringIndex :word;
+    myPos       :integer;
 
 begin
-
      TimeBase:=0;
+
+     // --- IFK Nummer auslesen ---
+     if(StringGrid1.Cells[AColIFK,y_zelle] <> TEmpty) then begin
+       myPos:= pos(TZeile,Form_FunctionList.StringGrid1.Cells[AColIFK,y_zelle]);
+
+       // wurde auf eine andere Zeile verwiesen-> zeilennummer auschneiden
+       if(myPos <>0) then begin
+         StringLeng:= length (Form_FunctionList.StringGrid1.Cells[AColIFK,y_zelle]);
+         // zeilennummer auschneiden und nummer uebernehem
+         RowNr:= StrTOInt(copy(Form_FunctionList.StringGrid1.Cells[AColIFK,y_zelle], myPos+4, StringLeng-(length(TZeile))));
+         IFKNr:= DataValueArray[RowNr];
+       end else begin
+         try
+            IFKNr:= StrToInt('$'+StringGrid1.Cells[AColIFK,y_zelle]);//  uebernehme IFK Nummer
+         except
+            IFKNr:= 0;
+         end;
+       end;
+
+       // Debug
+       if (Form_Debug.CheckBox_Enabel.Checked) then begin
+             Form_Debug.ListBoxDebug.Items.Add('ANL:'+'IFK Nr: '+ IntToHex(IFKNr,4));
+       end;
+     end;
 
      // --- Write IFK ---
      if(StringGrid1.Cells[AColDO,y_zelle] = TWriteIFK) then begin
-
-       try
-        IFKNr:= StrToInt('$'+StringGrid1.Cells[AColIFK,y_zelle]);//  uebernehme IFK Nummer
-       except
-        IFKNr:= 0;
-       end;
 
        FCT  := StrToInt('$'+StringGrid1.Cells[AColFCT,y_zelle]);//  uebernehme Function code
        DataValueArray[y_zelle]:= GiveStringData(y_zelle);
@@ -592,12 +613,6 @@ begin
 
      // --- Read IFK -----
      end else if(StringGrid1.Cells[AColDO,y_zelle] = TReadIFK) then begin
-
-       try
-        IFKNr:= StrToInt('$'+StringGrid1.Cells[AColIFK,y_zelle]);//  uebernehme IFK Nummer
-       except
-        IFKNr:= 0;
-       end;
 
        FCT  := StrToInt('$'+StringGrid1.Cells[AColFCT,y_zelle]);//  uebernehme Function code
 
@@ -638,12 +653,6 @@ begin
 
      // ---  Write Functionscode ---
      end else if(StringGrid1.Cells[AColDO,y_zelle] = TWriteFCT) then begin
-
-       try
-        IFKNr:= StrToInt('$'+StringGrid1.Cells[AColIFK,y_zelle]);//  uebernehme IFK Nummer
-       except
-        IFKNr:= 0;
-       end;
 
        FCT  := StrToInt('$'+StringGrid1.Cells[AColFCT,y_zelle]);//  uebernehme Function code
 
@@ -1141,13 +1150,14 @@ begin
          //steht die IFK in in einer anderen zeile
          myPos:= pos(TZeile,Form_FunctionList.StringGrid1.Cells[AColIFK,y_zelle]);
          if(myPos>0) then begin
-                     FUCK
            StringLeng:= length (Form_FunctionList.StringGrid1.Cells[AColIFK,y_zelle]);
-           ValueStr:= copy(Form_FunctionList.StringGrid1.Cells[AColIFK,y_zelle], myPos+4, StringLeng-(myPos+4));
-           Form_Properties.Combo_IFKNr_Row.ItemIndex:= Form_Properties.Combo_IFKNr_Row.Items.IndexOf(ValueStr)
+           ValueStr:= copy(Form_FunctionList.StringGrid1.Cells[AColIFK,y_zelle], myPos+4, StringLeng-(length(TZeile)));
+           Form_Properties.Combo_IFKNr_Row.ItemIndex:= Form_Properties.Combo_IFKNr_Row.Items.IndexOf(ValueStr);
+           Form_Properties.ComboBox_IFKNr.Enabled:= false
          end else begin
              Form_Properties.ComboBox_IFKNr.ItemIndex:= Form_Properties.ComboBox_IFKNr.Items.IndexOf(string(Form_FunctionList.StringGrid1.Cells[AColIFK,y_zelle]));
-             Form_Properties.Combo_IFKNr_Row.ItemIndex:=1;
+             Form_Properties.Combo_IFKNr_Row.ItemIndex:=0;
+             Form_Properties.ComboBox_IFKNr.Enabled:= true;
          end;
        end;
 
@@ -1194,7 +1204,7 @@ begin
          //offset suchen, ausschneiden und eintragen
          myPos:= pos(TOffset,Form_FunctionList.StringGrid1.Cells[AColWrData,y_zelle]);
          if(myPos > 0) then begin
-            ValueStr:= copy(Form_FunctionList.StringGrid1.Cells[AColWrData,y_zelle], myPos+4, 2);
+            ValueStr:= copy(Form_FunctionList.StringGrid1.Cells[AColWrData,y_zelle], myPos+4, 4);
             Form_Properties.Edit_Offset.Text:= ValueStr;
          end;
        end;

@@ -83,10 +83,10 @@ TStop       = 'Stop';
 VerzDateiHelp = 'Help';
 
 ManHexInput     = '>CCCC';
-EditOffsetInput = '>aa';
+EditOffsetInput = '>CCCC';
 ManZeilEmpty    = '000';
 WRConstEmpty    = '0000';
-OffsetEmpty     = '00';
+OffsetEmpty     = '0000';
 FCTManEmpty     = '00';
 PropEmpty       = 'NIL';
 
@@ -132,9 +132,6 @@ var MainLoopCount    :_DWORD;
     DataValueArray   : array[1..256] of _WORD;
     
     Anwendungsverzeichnis:string;
-
-    myProperties:TProperties;
-
 
 implementation
 

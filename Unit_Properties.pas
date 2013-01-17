@@ -112,6 +112,7 @@ var GridIndex:Word;
 procedure TForm_Properties.Button_OKClick(Sender: TObject);
 
 begin
+
     GridIndex:= TabelIndex;
 
     Form_FunctionList.StringGrid1.Cells[AColDO,GridIndex]:= ComboBox_Function.Text;
@@ -143,7 +144,7 @@ begin
             if(Label5.Caption <> 'Hex') then Form_FunctionList.StringGrid1.Cells[AColWrData,GridIndex]:= TZeile+Edit_WR_Constant.Text
             else Form_FunctionList.StringGrid1.Cells[AColWrData,GridIndex]:= TManuell+Edit_WR_Constant.Text;
 
-            if(Edit_Offset.Text <> OffsetEmpty) then
+            if(Edit_Offset.Text <> OffsetEmpty) and (Edit_Offset.Enabled = true) then
             Form_FunctionList.StringGrid1.Cells[AColWrData,GridIndex]:=Form_FunctionList.StringGrid1.Cells[AColWrData,GridIndex]+TOffset+Edit_Offset.Text;
       end;
     end else Form_FunctionList.StringGrid1.Cells[AColWrData,GridIndex]:= TEmpty;

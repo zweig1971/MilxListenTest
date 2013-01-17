@@ -42,6 +42,7 @@ StringGridCol_5 = 'Rd-Data';
 StringGridCol_6 = 'Data Bin';
 StringGridCol_7 = 'Comp';
 StringGridCol_8 = 'Active';
+StringGridCol_9 = 'Comments';
 StringGridCol_99= 'All';
 
 TWriteIFK   = 'Write IFK';
@@ -83,10 +84,10 @@ TStop       = 'Stop';
 VerzDateiHelp = 'Help';
 
 ManHexInput     = '>CCCC';
-EditOffsetInput = '>aa';
+EditOffsetInput = '>CCCC';
 ManZeilEmpty    = '000';
 WRConstEmpty    = '0000';
-OffsetEmpty     = '00';
+OffsetEmpty     = '0000';
 FCTManEmpty     = '00';
 PropEmpty       = 'NIL';
 
@@ -106,6 +107,7 @@ AColRdData    = 5;
 AcolRdDataBin = 6;
 AColCmp       = 7;
 AColActive    = 8;
+AColComment   = 9;
 
 MaxCounterSend = $10000;
 

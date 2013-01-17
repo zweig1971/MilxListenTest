@@ -426,7 +426,8 @@ end;
 
 procedure TForm_Properties.ComboBox_Write_DataChange(Sender: TObject);
 begin
-     DisEbnable(0,false,true);
+     DisEbnable(ComboBox_FCT.ItemIndex,false,true);
+ 
 end;
 
 procedure TForm_Properties.CheckBox_ONClick(Sender: TObject);
